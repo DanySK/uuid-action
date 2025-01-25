@@ -1,3 +1,13 @@
+## [2.0.0](https://github.com/DanySK/uuid-action/compare/1.0.6...2.0.0) (2025-01-25)
+
+### ⚠ BREAKING CHANGES
+
+* drop all inputs and use UUIDv7 (#24)
+
+### Features
+
+* drop all inputs and use UUIDv7 ([#24](https://github.com/DanySK/uuid-action/issues/24)) ([0d1456b](https://github.com/DanySK/uuid-action/commit/0d1456b66ba0223d13ba6c7f0b49a94a85a76e77))
+
 ## [1.0.6](https://github.com/DanySK/uuid-action/compare/1.0.5...1.0.6) (2025-01-25)
 
 ### Dependency updates
