@@ -1,12 +1,5 @@
 name: 'UUID Action'
 description: 'Generate UUIDs.'
-inputs:
-  name:
-    description: 'create a UUID using a name.'
-    required: false
-  namespace:
-    description: 'create a UUID using a namespace.'
-    required: false
 outputs:
   uuid:
     description: 'the generated UUID.'
