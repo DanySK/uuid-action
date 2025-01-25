@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Set UUID
         id: generate-uuid
-        uses: danysk/uuid-action@1.0.1
+        uses: danysk/uuid-action@2.0.1 # Pick the last version
       # use the output from the `generate-uuid` step
       - name: Get the UUID
         run: echo "UUID is ${{ steps.generate-uuid.outputs.uuid }}"
