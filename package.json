@@ -13,7 +13,7 @@
     "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.20.5",
+    "@zeit/ncc": "^0.22.0",
     "semantic-release-preconfigured-conventional-commits": "1.1.119"
   },
   "engines": {
