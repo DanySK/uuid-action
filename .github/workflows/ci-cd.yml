@@ -1,0 +1,66 @@
+name: CI/CD Process
+
+on:
+  push:
+    branches-ignore:
+      - 'renovate/**'
+  pull_request:
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ windows-2022, macos-14, ubuntu-24.04 ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          path: 'action'
+      - id: uuid
+        uses: ./action
+      # Check that the `uuid` output of the previous step is a valid UUID
+      - run: |
+            echo "${{ steps.uuid.outputs.uuid }}" | grep -E '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'
+
+  release:
+    if: github.repository == 'DanySK/uuid-action' && github.event_name == 'push'
+    permissions:
+      contents: write
+    needs:
+      - test
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+      - name: Install Node
+        uses: actions/setup-node@v4.1.0
+        with:
+          node-version-file: package.json
+      - run: npm install
+      - name: Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: npx semantic-release
+
+  success:
+    runs-on: ubuntu-24.04
+    needs:
+      - test
+      - release
+    if: >-
+      always() && (
+        contains(join(needs.*.result, ','), 'failure')
+        || !contains(join(needs.*.result, ','), 'cancelled')
+      )
+    steps:
+      - name: Verify that there were no failures
+        run: ${{ !contains(join(needs.*.result, ','), 'failure') }}

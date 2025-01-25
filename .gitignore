@@ -15,3 +15,6 @@ node_modules/
 
 # editor
 .vscode
+
+.idea/
+deploy_key*
