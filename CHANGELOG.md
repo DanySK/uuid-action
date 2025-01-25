@@ -1,3 +1,13 @@
+## [1.0.5](https://github.com/DanySK/uuid-action/compare/1.0.4...1.0.5) (2025-01-25)
+
+### Dependency updates
+
+* **core-deps:** update dependency @actions/core to v1.10.1 ([#2](https://github.com/DanySK/uuid-action/issues/2)) ([48d9485](https://github.com/DanySK/uuid-action/commit/48d9485ac7d1dc42ac15f8f2c7a749012e765ee0))
+
+### Build and continuous integration
+
+* delete yarn.lock ([ce7b877](https://github.com/DanySK/uuid-action/commit/ce7b8779afd0a3605abff950268b548b641dd9a7))
+
 ## [1.0.4](https://github.com/DanySK/uuid-action/compare/1.0.3...1.0.4) (2025-01-25)
 
 ### Documentation
