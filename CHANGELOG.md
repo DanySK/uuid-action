@@ -1,3 +1,9 @@
+## [1.0.4](https://github.com/DanySK/uuid-action/compare/1.0.3...1.0.4) (2025-01-25)
+
+### Documentation
+
+* update readme ([414cdce](https://github.com/DanySK/uuid-action/commit/414cdceece62deb3ecfa96f071b269450ae7197f))
+
 ## [1.0.3](https://github.com/DanySK/uuid-action/compare/1.0.2...1.0.3) (2025-01-25)
 
 ### Dependency updates
