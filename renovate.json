@@ -4,6 +4,7 @@
     "github>DanySK/renovate-config:composite-action"
   ],
   "includeForks": true,
+  "labels": ["dependencies"],
   "packageRules": [
     {
       "description": "Trigger a patch update on @actions/core updates",
