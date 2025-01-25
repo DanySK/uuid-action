@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "local>DanySK/renovate-config:composite-action"
-  ]
+    "github>DanySK/renovate-config:composite-action"
+  ],
+  "includeForks": true
 }
