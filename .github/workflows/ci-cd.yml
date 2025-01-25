@@ -1,9 +1,7 @@
-name: CI/CD Process
+name: CI/CD
 
 on:
   push:
-    branches-ignore:
-      - 'renovate/**'
   pull_request:
   workflow_dispatch:
 
@@ -12,30 +10,12 @@ defaults:
     shell: bash
 
 jobs:
-  test:
+  ci-cd:
     strategy:
       fail-fast: false
       matrix:
         os: [ windows-2022, macos-14, ubuntu-24.04 ]
     runs-on: ${{ matrix.os }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4.2.2
-        with:
-          path: 'action'
-      - id: uuid
-        uses: ./action
-      # Check that the `uuid` output of the previous step is a valid UUID
-      - run: |
-            echo "${{ steps.uuid.outputs.uuid }}" | grep -E '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'
-
-  release:
-    if: github.repository == 'DanySK/uuid-action' && github.event_name == 'push'
-    permissions:
-      contents: write
-    needs:
-      - test
-    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
@@ -46,16 +26,22 @@ jobs:
         with:
           node-version-file: package.json
       - run: npm install
+      - name: Build with vercel/ncc
+        run: npx ncc build index.js -o dist
+      - name: Test the action
+        id: uuid
+        uses: ./
+      # Check that the `uuid` output of the previous step is a valid UUID
+      - run: |
+          echo "${{ steps.uuid.outputs.uuid }}" | grep -E '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'
       - name: Semantic Release
+        if: runner.os == 'Linux'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: npx semantic-release
-
   success:
     runs-on: ubuntu-24.04
-    needs:
-      - test
-      - release
+    needs: ci-cd
     if: >-
       always() && (
         contains(join(needs.*.result, ','), 'failure')
