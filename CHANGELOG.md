@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/DanySK/uuid-action/compare/1.0.2...1.0.3) (2025-01-25)
+
+### Dependency updates
+
+* **core-deps:** update dependency @actions/core to v1.3.0 ([af1c36e](https://github.com/DanySK/uuid-action/commit/af1c36e5b5adf1ff9490cd2d8002354e421d9ec0))
+* **deps:** update dependency @vercel/ncc to v0.38.3 ([ddacf10](https://github.com/DanySK/uuid-action/commit/ddacf1059b76e66e054353b2ede81e9053973b0e))
+
 ## [1.0.2](https://github.com/DanySK/uuid-action/compare/1.0.1...1.0.2) (2025-01-25)
 
 ### Dependency updates
