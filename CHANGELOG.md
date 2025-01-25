@@ -1,3 +1,13 @@
+## [1.0.2](https://github.com/DanySK/uuid-action/compare/1.0.1...1.0.2) (2025-01-25)
+
+### Dependency updates
+
+* **core-deps:** update dependency uuid to v11 ([63ff9ea](https://github.com/DanySK/uuid-action/commit/63ff9ea8f6881e3ad627312f9ff3c1a83b468e24))
+
+### Build and continuous integration
+
+* replace @zeit/ncc with @vercel/ncc ([12a7d02](https://github.com/DanySK/uuid-action/commit/12a7d0201d668ad4cda2a69c6c28ba0957d5a3ff))
+
 ## [1.0.1](https://github.com/DanySK/uuid-action/compare/1.0.0...1.0.1) (2025-01-25)
 
 ### Dependency updates
