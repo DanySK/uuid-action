@@ -1,3 +1,9 @@
+## [1.0.6](https://github.com/DanySK/uuid-action/compare/1.0.5...1.0.6) (2025-01-25)
+
+### Dependency updates
+
+* **core-deps:** update dependency @actions/core to v1.11.1 ([#3](https://github.com/DanySK/uuid-action/issues/3)) ([721329c](https://github.com/DanySK/uuid-action/commit/721329c9b8b2245b55b5441fd3a0ca92e404de1d))
+
 ## [1.0.5](https://github.com/DanySK/uuid-action/compare/1.0.4...1.0.5) (2025-01-25)
 
 ### Dependency updates
