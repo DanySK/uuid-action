@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/DanySK/uuid-action/compare/2.0.2...2.0.3) (2026-01-11)
+
+### Dependency updates
+
+* **core-deps:** update dependency @actions/core to v2.0.2 ([#90](https://github.com/DanySK/uuid-action/issues/90)) ([04c238a](https://github.com/DanySK/uuid-action/commit/04c238ad296512836f065f39f4169a83d39cd634))
+* **deps:** update node.js to 24.12 ([#89](https://github.com/DanySK/uuid-action/issues/89)) ([e62bb4b](https://github.com/DanySK/uuid-action/commit/e62bb4bb67532bb0db22ebab0bf4339ad6868130))
+
 ## [2.0.2](https://github.com/DanySK/uuid-action/compare/2.0.1...2.0.2) (2025-12-12)
 
 ### Dependency updates
