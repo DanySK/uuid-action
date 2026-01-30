@@ -1,3 +1,15 @@
+## [2.0.4](https://github.com/DanySK/uuid-action/compare/2.0.3...2.0.4) (2026-01-30)
+
+### Dependency updates
+
+* **core-deps:** update dependency @actions/core to v2.0.3 ([#94](https://github.com/DanySK/uuid-action/issues/94)) ([90f2584](https://github.com/DanySK/uuid-action/commit/90f258474c036114fa0d56da4d1edb513b97991f))
+* **deps:** update node.js to 24.13 ([#91](https://github.com/DanySK/uuid-action/issues/91)) ([1da812e](https://github.com/DanySK/uuid-action/commit/1da812e140b34425266d64287d9ceee911bc6fed))
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v6.0.2 ([#93](https://github.com/DanySK/uuid-action/issues/93)) ([8377112](https://github.com/DanySK/uuid-action/commit/837711228aef798d2683a5aec43183cbe621d020))
+* **deps:** update actions/setup-node action to v6.2.0 ([#92](https://github.com/DanySK/uuid-action/issues/92)) ([aed2eaf](https://github.com/DanySK/uuid-action/commit/aed2eafd0c84726c82268bc652060be12683c199))
+
 ## [2.0.3](https://github.com/DanySK/uuid-action/compare/2.0.2...2.0.3) (2026-01-11)
 
 ### Dependency updates
