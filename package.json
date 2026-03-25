@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@actions/core": "^2.0.0",
-    "uuidv7": "1.1.0"
+    "uuidv7": "1.2.0"
   },
   "devDependencies": {
     "@vercel/ncc": "0.38.4",
